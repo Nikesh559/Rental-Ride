@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: booking-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/car_rental_svc
+    username: root
+    password: root1234
+    driverClassName: com.mysql.cj.jdbc.Driver
+    jpa:
+      show-sql: true
+      properties:
+        hibernate:
+          format_sql: true
+      database-platform: org.hibernate.dialect.H2Dialect
+server:
+  port: 8081
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+

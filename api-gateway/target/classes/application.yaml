@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: spring-cloud-gateway
+  cloud:
+    gateway:
+     routes:
+      - id: customer-service
+        uri: lb://customer-service
+        predicates:
+          - Path=/customer/**
+      - id: booking-service
+        uri: lb://booking-service
+        predicates:
+          - Path=/explore/**, /book, /log/**
+        metadata:
+          connect-timeout: 200
+          response-timeout: 20000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+
+server:
+  port: 8080
+
+logging:
+  level:
+    root: DEBUG
+    org:
+      springframework:
+        cloud:
+          gateway:
+            route:
+              RouteDefinitionLocator: INFO
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - gateway
