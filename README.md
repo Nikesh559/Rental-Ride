@@ -1,8 +1,11 @@
 # Car Rental Service
-Car Rental System where customer can login, explore cars options and can make booking.
+Car Rental System where customer can login/logout, explore cars options and can make booking.
+
+https://user-images.githubusercontent.com/59741887/200472373-27fb7a10-5f09-48db-975c-a27cf5470852.mp4
 
 # Table of Contents
 * Technologies used 
+* Features
 * Project Overview
 * Project Architecture
 
@@ -13,7 +16,12 @@ Car Rental System where customer can login, explore cars options and can make bo
 * API Gateway
 * Netflix Eureka
 
-https://user-images.githubusercontent.com/59741887/200472373-27fb7a10-5f09-48db-975c-a27cf5470852.mp4
+# Features
+ - Used API Gateway for dynamic routing, filtering and security.
+ - Implemented Authentication mechanism using Spring Security and JWT. 
+ - Used BCryptPasswordEncoder for hashing the password.
+ - Used Netflix Eureka for microservices discovery.
+
 
 # Project Architecture
 <img src="https://user-images.githubusercontent.com/59741887/200380408-9a9fa591-3765-41b7-a86c-9e9615662382.PNG" width="600" height="450"/>
@@ -41,17 +49,6 @@ POST	| /book	| Book a car | USER
 DELETE | booking/{bookingId} | Delete booking | USER
 GET	| /logs/cars/{carId}	| Get Car history	 | ADMIN
 GET	| /logs/customer/{customer}	| Get Customer booking history	| ADMIN
-
-### API Gateway
-
-
-### Discovery Server
-
-Service Discovery allows automatic detection of the network locations for all registered services. These service might have dynamically assigned addresses. 
-In this project, <b>Netflix Eureka</b> is used. It uses client-service discovery pattern, where clients fetch the registry from discovery server for determining the location available services and load balancing between them. 
-
-Eureka Dashboard provides information of running services and no. of instance: `http://localhost:8761`
-
 
 
 
