@@ -13,8 +13,7 @@ Car Rental System where customer can login, explore cars options and can make bo
 * API Gateway
 * Netflix Eureka
 
-
-![CarRentalDemoVideo2](https://user-images.githubusercontent.com/59741887/200380142-9c93459f-58f1-40d5-b1bb-1d404c576a50.gif)
+https://user-images.githubusercontent.com/59741887/200472373-27fb7a10-5f09-48db-975c-a27cf5470852.mp4
 
 # Project Architecture
 <img src="https://user-images.githubusercontent.com/59741887/200380408-9a9fa591-3765-41b7-a86c-9e9615662382.PNG" width="600" height="450"/>
@@ -39,6 +38,7 @@ Method	| Path	| Description	| ROLE
 GET | /explore/cars | Get all cars records | USER
 GET | /explore/car/{carId} | Get car record by id | USER
 POST	| /book	| Book a car | USER
+DELETE | booking/{bookingId} | Delete booking | USER
 GET	| /logs/cars/{carId}	| Get Car history	 | ADMIN
 GET	| /logs/customer/{customer}	| Get Customer booking history	| ADMIN
 
@@ -51,6 +51,10 @@ Service Discovery allows automatic detection of the network locations for all re
 In this project, <b>Netflix Eureka</b> is used. It uses client-service discovery pattern, where clients fetch the registry from discovery server for determining the location available services and load balancing between them. 
 
 Eureka Dashboard provides information of running services and no. of instance: `http://localhost:8761`
+
+
+
+
 
 
 
