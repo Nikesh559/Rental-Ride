@@ -1,5 +1,5 @@
 # Car Rental Service
-Car Rental System where customer can login/logout, explore cars options and can make booking.
+It has functionality to explore cars options and make booking. Additional admin access to review car logs and customer booking history.
 
 https://user-images.githubusercontent.com/59741887/200472373-27fb7a10-5f09-48db-975c-a27cf5470852.mp4
 
