@@ -1,4 +1,4 @@
-# Car Rental Service
+# Rental Ride
 It has functionality to explore cars options and make booking. Additional admin access to review car logs and customer booking history.
 
 https://user-images.githubusercontent.com/59741887/200472373-27fb7a10-5f09-48db-975c-a27cf5470852.mp4
